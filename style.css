@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+
+  }
+@media (max-width: 768px) {
+  
+}
+@media (max-width: 576px) {
+  
+}
+
+p {
+  font-size: smaller;
+  /*---Change font? --*/
+
+}
+
+/*---Necessary so that footer bar does not overlay content --*/
+body { 
+  padding-bottom: 100px; 
+  min-height: 100vh;
+  position: relative;
+}
+
+#footer {
+  text-align: center;
+  background-color: lightblue;
+  color: black;
+  position: absolute;
+  height: 100px;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  clear: both;
+}
+
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/*--- Settings for Hannos Carousel --*/
+/* Fix for getting Caption outside of image carousel */
+.carousel-caption { 
+  /*bottom:-65px; This is what I did instead of the following three lines to get the caption outside*/
+  margin-top: 3px;  
+  text-align: left;
+  position: relative;
+  left: auto;
+  right: auto;
+  /*text-align: start; Somehow not working*/ 
+  color: #CFCFCF; 
+  font-size: small;
+  font-style: oblique;
+  font-family:'Avenir LT W01 45 Book';
+
+}
+/* Fix for getting Controls outside of image carousel */
+
+.carousel{
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+
+.carousel-control-next,
+.carousel-control-prev {
+  width: 4%;
+  font-size: 30px;
+  bottom: 10%;  /* Puts the arrows where I want them vertically :) */
+
+}
+
+/*
+This is for if i want to move the arrows
+.carousel-control-prev {
+  margin-left: -40px;
+}
+
+.carousel-control-next {
+  margin-right: -40px;
+}
+
+*/
+
+.fa-angle-left,
+.fa-angle-right {
+  color:red;
+  opacity: 1.0;
+
+}
+
+
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}
+
+/* unvisited link */
+a:link {
+  color: darkblue;
+}
+
+/* visited link */
+a:visited {
+  color: darkblue;
+}
+
+/* mouse over link */
+a:hover {
+  color: red;
+}
+
+/* selected link */
+a:active {
+  color: #0000FF;
+}
+
+
+
+/* This affects the style of the navbar
+------------------------------------------------------ */
+#selected {
+  color: red !important;
+}
+
+/* Not so sure about this */
+.navbar {
+  border-bottom-color: black;
+  border-bottom-width: 3px;
+  border-bottom-style: double;
+}
+
+.navbar-custom {
+  background-color: transparent;
+  color: black;
+}
+/* Affects everything that is not an item of the menu - like my name on the left side */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+  color: black;
+}
+/* Affects the items of the menu */
+.navbar-custom .navbar-nav .nav-link {
+  color: black;
+}
+/* change the color of active or hovered links */
+.nav-item:active, .nav-item:hover {
+  color: red !important;
+}
+
+.navbar .nav-item:active .nav-link,
+.navbar .nav-item:hover .nav-link {
+  color: red !important;
+}
+
+/* This affects the style of projects on the project page
+------------------------------------------------------ */
+.project_header {
+  color:  grey;
+  /* Let's put some nice font later */
+}
+
+.project_cell {
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+}
+
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+
+
+
+
+
+
+

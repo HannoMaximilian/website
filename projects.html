@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <title>Projects</title>
+    <link rel="icon" href="./img/hz_3.png">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light"> 
+        <a href='./index.html' class="navbar-brand">Hanno Maximilian Zang</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMenu">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a href="./index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="./aboutme.html" class="nav-link">About Me</a>
+        </li>
+        <li class="nav-item">
+            <a  href="./photography.html" class="nav-link">Photography</a>
+        </li>
+        <li class="nav-item">
+            <a id="selected" href="./projects.html" class="nav-link">Projects</a>
+        </li>
+    </ul>
+    </div>
+</nav>
+
+<!-- Description-->
+<div class="container-fluid"  style="padding-top: 30px;">   <!-- background-color: whitesmoke;-->
+    <div class="row justify-content-center">   <!--style="max-width: 800px;"-->
+    <div class="col-xl-5 col-lg-8 col-md-10 pb-5">
+        <h2 class="display-5">Projects</h1>
+        <p>
+            This is a place where I will present projects that I am persuing privately.<br>
+            Since the programming projects I have been a part of in the past were mostly confidential and only published in private
+            Git repositories (if at all),<br>
+            I will not present them here. I also do not feel like redoing open projects I did in the past, so this page will only<br>
+            contain projects that I started during the time of building this website. For any further information on projects<br>
+            listed in my CV or on my LinkedIn page, please reach out to me.<br><br>
+            In general, I try to go with the easiest way when programming. I am sure there are many more elegant and  ways<br>
+            to write the code that I am using but I don't really see the point in for example writing some sophisticated vectorized version<br>
+            when the script is run once and a loop is good enough.
+        </p>
+</div>
+</div>
+</div>
+
+
+<!-- Analytics Technology Map-->
+<div class="container-fluid"  style="padding-top: 30px; padding-bottom: 30px; background-color: whitesmoke; border-bottom: 1px solid black;">   <!-- background-color: whitesmoke;-->
+    <div class="row justify-content-center x">   <!--style="max-width: 800px;"-->
+        <div class="col-xl-6 col-lg-7 col-md-8 col-xs-11 pb-1">
+        <h4 class="project_header" >Analytics Technology Map</h4>
+        <p>28.04.2020</p>
+        <a href="https://github.com/HannoMaximilian/AnalyticsTechnologyMap" target="_blank">Github Repository of project</a>
+        </div>
+    </div>
+
+    <!-- Desciption-->
+    <div class="row justify-content-center" style="padding-left:5px;">
+        <div class="col-xl-6 col-lg-9 col-md-10 col-xs-11 pb-1">
+            <h5>Description</h5>
+            <p>The goal of this project is to create a map of technologies that are related to Data Analytics. This includes 
+                database technolgies, data processing technologies and data visualization tools. Technologies should appear close to each other on the
+                map if they are either similar (HBase, Cassandra) or if they are often used together (HBase, Phoenix). I originally got the idea when working 
+                at a consultancy where we programmed an Artificial Intelligence that would make suggestions on which consultant should be staffed on a given project.
+                In order to generate suggestions, we mapped all available consultants in a high dimensional vectorspace using word2vec. We then mapped each project in
+                the same vectorspace and calculated the consultants that were closest. (This is a simplified version of how the final product worked).
+                <a href="https://pathmind.com/wiki/word2vec">Here is a basic description of how these vectors can be generated</a>
+                talk of David Kriesel, in which he described his works related to the analysis of the articles of a large german newspaper.
+                His talk is on German, but there is an English version and I highly recommend watching it, since it is very 
+                interesting to see not only his visualizations and results, but also what is possible to derive from metadata.<br>
+                <a href="https://www.youtube.com/watch?v=-YpwsdRKt8Q" style="color:darkblue;">German version,</a>
+                <a href="https://www.youtube.com/watch?v=bYviBstTUwo" style="color:darkblue;"> English version</a><br>
+                In the visualization that serves as an example for what I am trying to do, David Kriesesl maps the Keywords of news articles
+                (policics, economy, Angela Merkel) based on how often they appear as keywords together.
+            </p>            
+        </div>
+    </div>
+
+    <!-- Horizontal red line-->
+    <div class="container-fluid" style="padding-top:0px; padding-bottom:0px; margin-top: 0px; margin-bottom: 0px;">
+        <div class="row justify-content-center"">
+            <div class="col-lg-6 col-xs-8 pb-1" >
+                <hr style="border-top: 1px solid red;">
+            </div>
+            <div class="col-lg-4 "></div>
+        </div>
+    </div>
+
+    <!-- Approach-->
+    <div class="row justify-content-center" style="padding-left:5px;">
+        <div class="col-xl-6 col-lg-9 col-md-10 col-xs-11 pb-1">
+            <h5>Initial Approach</h5>
+            <div style="padding-left: 10px;">
+                <p style="font-weight: bold; margin-top: 10px; margin-bottom: 0px;">Data</p>
+                <p style="margin-top: 0px; margin-bottom: 0px;">
+                    As a data source, I need a large amount of text in which the application of technologies that are interesting to us are described.
+                    Ideally, the data would consist of  
+                    As a data scource, I am going to use posts and 
+                    comments from reddit.com.<br>
+                    Reddit.com is a network of communities based on people's interests.
+                    There are several subreddits, which make up subcommunities in which people share content and ask questions.
+                    Other members of a subreddit can see and comment on the posts. 
+                </p> 
+                <p style="font-weight: bold; margin-top: 10px; margin-bottom: 0px;">Analytics</p>
+                <p style="margin-top: 0px; margin-bottom: 0px;">
+                    Since the raw data that I am going to use is not structured in any way, I am going to extract features in a very simple way.
+                    I am going to write a json file with technologies that I want to include in my analysis. For each technology, I am going to
+                    specify aliases (Spark = Spark2, vue = vue.js, S3 = Simple Storage Service) and the corresponding technology family (Spark: Analytics, MongoDB: Database).
+
+                    Use a structured list of technologies that should be considered structured in a json file.
+                    This lets me use aliases . Then look through
+                    each post and through each comment and find out if the technologies that I have specified apppeared in the post/comment.
+                    This has one major drawback: Some technolgies that I would like to include have names that correspond to English words, such as 
+                    the programming language Go and the Javascript framework React. A possible way around would be to have a Natural Language Processing model
+                    analyze which of the words or group of words in the comments or posts correspond to a named entity (Basically, which of the words are names).
+                    I will experiment with ways to deal with the drawback later, and will ignore "problematic" technolgies in the first version of the technology map.
+                </p>
+                <p style="font-weight: bold; margin-top: 10px; margin-bottom: 0px;">Testing and Visualization</p>
+                <p style="margin-top: 0px; margin-bottom: 0px;">
+                    In general, Natural Language Processing models use a vectorspace for the embedding of words or phrases that is high-dimensional, typically in the hundreds.
+                    We do not need to map the large number of words, that languages normally use, into our vectorspace. Therefore, our vectorspace will be much smaller
+                    in terms of its dimensionality. In my past experience, the optimal number of dimensions for a vectorspace that had to contain 1000-2000 different vectors was 
+                    in the range of 10-20. 
+                    If we want to visualize the entire map, we would have to find a way to plot all technologies in two dimensions.
+                    If we decide to just use a two dimensional map, we can use Gephi, the tool that David Kriesel used a tool for his visualization. Fortunately,
+                    he gives a description of how he used the tool on his website.
+                    There is still a lot of work ...given... for using the tool.<br>
+                    <i class="fa fa-angle-right" style="color:red; padding-top: 5px; font-size: 24px;"></i> Use basic visualizations to test if our model is working.
+                    For example, test which are the technologies closest to a given test technology and visualize the distance of each of the resulting technologies to our
+                    test technology (maybe just use a basic table). If results are good, see how low we can go in terms of the vectorspaces dimensionality. If d=2 still gives good
+                    enough, try out Gephi.
+                </p>
+            </div>        
+        </div>
+    </div>
+
+    <!-- Horizontal red line-->
+    <div class="container-fluid" style="padding-top:0px; padding-bottom:0px; margin-top: 0px; margin-bottom: 0px;">
+        <div class="row justify-content-center"">
+            <div class="col-lg-6 col-xs-8 pb-1" >
+                <hr style="border-top: 1px solid red;">
+            </div>
+            <div class="col-lg-4 "></div>
+        </div>
+    </div>
+
+    <!-- Current status-->
+    <div class="row justify-content-center" style="padding-left:5px;">
+        <div class="col-xl-6 col-lg-9 col-md-10 col-xs-11 pb-1">
+            <h5>Current status</h5>
+            <p>  I used the <a href="https://pushshift.io/api-parameters/">pushlift API</a> to acess old reddit data.
+                I chose to include posts and comments from subreddits "MachineLearning", "webdev", "bigdata", "datascience", "analytics" and "ArtificialInteligence". 
+                I decided to use data from the last 2 years, to get a somewhat recent view on things. I also decided only to include posts and 
+                comments that have as least as many likes as dislikes. This might be overcautious, since most of the time the comment
+                was probably not downvoted because the technologies named should not appear together. Under the given requirements
+                (subreddit, time, vote) I get more than 70.000 posts and more than 900.000 comments with a content that contain more than 15 characters.
+                There are two ways how the data can be used:<br>
+                1: Treat every post and every comment individually. This would mean that I count two technologies as appearing
+                together only if they appear in the same post/comment. 
+                2: Combine contents of a post and its comments. Either "globally", by just combining all of their contents or 
+                by building several "local" combinations, in which each comment would be combined only with its father comment (which 
+                could be the original post). I will start by first analyzing each post and each comment individually, since it appears more
+                straightforward. A post or content has an effect on the outcome of the model, if at least two different technologies appear in it.
+
+                Bad examples: "I don’t believe Flume or Spark supports Hive ACID yet, but I could be wrong."<br>
+                "So HIVE isn't really SQL, it's a SQL based query language that translates into MapReduce, TEZ, Spark 
+                or some other distributed execution job. Which all of these execution engines were designed around ETL on large data sets."
+
+Presto on the other hand is straight up distributed SQL. 
+            </p>            
+        </div>
+    </div>
+</div>
+
+
+
+<!-- My website-->
+<div class="container-fluid"  style="padding-top: 30px; background-color: white;">   <!-- background-color: whitesmoke;-->
+    <div class="row justify-content-center x">   <!--style="max-width: 800px;"-->
+        <div class="col-xl-6 col-lg-7 col-md-8 col-xs-11 pb-1">
+        <h4 class="project_header" >My Website</h4><p>28.04.2020</p>
+        </div>
+    </div>
+
+    <!-- Desciption-->
+    <div class="row justify-content-center" style="padding-left:5px;">
+        <div class="col-xl-6 col-lg-9 col-md-10 col-xs-11 pb-1">
+            <h5>Description</h5>
+            <p>This actual website.
+            </p>            
+        </div>
+    </div>
+
+    <!-- Horizontal red line-->
+    <div class="container-fluid" style="padding-top:0px; padding-bottom:0px; margin-top: 0px; margin-bottom: 0px;">
+        <div class="row justify-content-center"">
+            <div class="col-lg-6 col-xs-8 pb-1" >
+                <hr style="border-top: 1px solid red;">
+            </div>
+            <div class="col-lg-4 "></div>
+        </div>
+    </div>
+
+    <!-- Approach-->
+    <div class="row justify-content-center" style="padding-left:5px;">
+        <div class="col-xl-6 col-lg-9 col-md-10 col-xs-11 pb-1">
+            <h5>Approach</h5>
+            <p>  HTML, Bootstrap
+            </p>            
+        </div>
+    </div>
+</div>
+
+
+    <div class="row justify-content-center">   <!--style="max-width: 800px;"-->
+        <div class="col-xl-2 col-lg-3 col-md-4 pb-5 ">
+            <p>
+                This is no1
+            </p>
+        </div>
+
+        <div class="col-xl-2 col-lg-3 col-md-4 pb-5">
+            <p>
+                this is no 2
+            </p>
+        </div>
+
+        <div class="col-xl-2 col-lg-3 col-md-4 pb-5">
+            <p>
+                this is no 3
+            </p>
+        </div>
+    </div>
+
+
+</body>
+
+<footer id="footer">
+    <small>
+        <a href= "./privacy_de.html" target="_blank" style="color:whitesmoke">Impressum, Disclaimer, Datenschutz (DE)</a><br>
+        <a href= "./privacy_en.html" target="_blank" style="color:whitesmoke">Impressum, Disclaimer, Privacy Policy (EN)</a>
+    </small>
+</footer>
+
+</html>
