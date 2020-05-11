@@ -174,13 +174,16 @@
                 2: Combine contents of a post and its comments. Either "globally", by just combining all of their contents or 
                 by building several "local" combinations, in which each comment would be combined only with its father comment (which 
                 could be the original post). I will start by first analyzing each post and each comment individually, since it appears more
-                straightforward. A post or content has an effect on the outcome of the model, if at least two different technologies appear in it.
+                straightforward. A post or content has an effect on the outcome of the model, if at least two different technologies appear in it. Of 
+                the more than 1 million posts and comments, only about 9000 contained at least two of the technologies that I searched for (the list of technologies
+                that are searched for are listed in the "technologies.json" file in the 
+                <a href="https://github.com/HannoMaximilian/AnalyticsTechnologyMap" target="_blank">projects repository</a>)
+                <div><img src="projects/TechnologyMap/heatmap.png" class="img-fluid"></div>
 
                 Bad examples: "I don’t believe Flume or Spark supports Hive ACID yet, but I could be wrong."<br>
                 "So HIVE isn't really SQL, it's a SQL based query language that translates into MapReduce, TEZ, Spark 
                 or some other distributed execution job. Which all of these execution engines were designed around ETL on large data sets."
 
-Presto on the other hand is straight up distributed SQL. 
             </p>            
         </div>
     </div>
