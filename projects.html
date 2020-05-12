@@ -38,15 +38,15 @@
 </nav>
 
 <!-- Description-->
-<div class="container-fluid"  style="padding-top: 30px;">   <!-- background-color: whitesmoke;-->
+<div class="container-fluid"  style="padding-top: 30px; padding-bottom: 30px;">   <!-- background-color: whitesmoke;-->
     <div class="row justify-content-center">   <!--style="max-width: 800px;"-->
     <div class="col-xl-9 col-sm-10 col-xs-11  pb-5">
         <h2 class="display-5">Projects</h1>
         <p>
             This is a place where I will present projects that I am persuing privately.<br>
             Since the programming projects I have been a part of in the past were mostly confidential and only published in private
-            Git repositories (if at all),<br>
-            I will not present them here. I also do not feel like redoing open projects I did in the past, so this page will only<br>
+            Git repositories (if at all),
+            I will not present them here.<br>I also do not feel like redoing older projects I did in the past, so this page will only<br>
             contain projects that I started during the time of building this website. For any further information on projects<br>
             listed in my CV or on my LinkedIn page, please reach out to me.<br><br>
         </p>
@@ -60,7 +60,7 @@
     <div class="row justify-content-center x">   <!--style="max-width: 800px;"-->
         <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
         <h3 class="project_header" >Analytics Technology Map</h3>
-        <p>28.04.2020</p>
+        <p>02.05.2020</p>
         <a href="https://github.com/HannoMaximilian/AnalyticsTechnologyMap" target="_blank">Github Repository of project</a>
         </div>
     </div>
@@ -70,17 +70,20 @@
         <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
             <h4>Description</h4>
             <p>The goal of this project is to create a map of technologies that are related to Data Analytics. This includes 
-                database technolgies, data processing technologies and data visualization tools. I hope to gather some insight into how Technologies are used in the real world, 
-                and how the application of certain Technologies change over time.Technologies should appear close to each other on the
-                map if they are often named together. Technologies are generally named together when discussing alternatives  (HBase, Cassandra) or if 
+                database technolgies, data processing technologies and data visualization tools. I hope to gather some insight into how those technologies are used in the real world, 
+                and how the application of certain technologies change over time. Technologies should appear close to each other on the
+                map if they are often named together by people discussing those technologies. 
+                Technologies are generally named together when discussing alternatives  (HBase, Cassandra) or if 
                 they are often used together (HBase, Phoenix). The ML/AI technology that is going to serve as foundation for this project is word embedding.
-                Basically, algorithms like word2vec assign a vector to every word in a text corpus. The vectors of words that often appear together will be close to
+                Basically, word embedding algorithms like word2vec assign a vector to every word in a text corpus. The vectors of words that often appear together will be close to
                 each other in the vector space. Here is a basic description of how a typical <a href="https://pathmind.com/wiki/word2vec">algorithm for word embeddings</a> works.
                 I originally got the idea when working at a consultancy where we programmed an Artificial Intelligence that would make suggestions
                  on which consultant should be staffed on a given project.
                 In order to generate suggestions, we mapped all available consultants in a high dimensional vectorspace. The vector of each individual
                 consultant was dependent on their CV and the Skills that they possessed. We then generated a vector for each consulting project in
-                the same vectorspace and calculated the consultants that were closest. (This is a simplified version of how the final product worked).
+                the same vectorspace and calculated the consultants that were closest. (This is a simplified version of how the final product worked)
+                For this project, instead of mapping all words found in a text corpus into the vector space, I will map only technologies that I have specified before.
+                Those technologies can consist of single or multiple words.
 
             </p>            
         </div>
@@ -115,15 +118,15 @@
                 </p> 
                 <p style="font-weight: bold; margin-top: 10px; margin-bottom: 0px;">Analytics</p>
                 <p style="margin-top: 0px; margin-bottom: 0px;">
-                    Since the raw data that I am going to use is not structured in any way, I am going to extract features in a very simple way.
+                    Since the raw data that I am going to use is not structured in any way, I am going to extract the technologies that are named in a very simple way.
                     I am going to write a json file with technologies that I want to include in my analysis. For each technology, I am going to
                     specify aliases (Spark = Spark2, vue = vue.js, S3 = Simple Storage Service) and the corresponding technology family (Spark: Analytics, MongoDB: Database).
                     Using aliases assures that I do not create two different embeddings for the same technology, and that I don't miss the appearance of a technology 
                     in the text.
-                    Then look through each post and through each comment and find out if the technologies that I have specified apppeared in the post/comment.
+                    I will then look through each post and through each comment and find out if the technologies that I have specified apppeared in the post/comment.
                     This has one major drawback: Some technolgies that I would like to include have names that correspond to English words, such as 
-                    the programming language Go and the Javascript framework React. A possible way around would be to have a Natural Language Processing model
-                    analyze which of the words or group of words in the comments or posts correspond to a named entity (Basically, which of the words are names).
+                    the Javascript framework React. A possible way around would be to have a Natural Language Processing model
+                    analyze which of the words or groups of words in the comments or posts correspond to a named entity (Basically, which of the words are names).
                     I will experiment with ways to deal with the drawback later, and will ignore "problematic" technolgies in the first version of the technology map.
                     When the data is structured, and all posts and comments are converted into lists of technologies that were mentioned in the respective post or comment,
                     I am going to use a word embedding algorithm like word2vec to map the technologies into a vectorspace. <br>
@@ -164,8 +167,9 @@
         <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
             <div style="padding-left: 20px;">
             <h5>Current status</h5>
-            <p> I used the <a href="https://pushshift.io/api-parameters/" target="_blank">pushlift API</a> to acess old reddit data.
-                I chose to include posts and comments from subreddits "MachineLearning", "webdev", "bigdata", "datascience", "analytics" and "ArtificialInteligence". 
+            <p>12.05.2020</p>
+            <p> I used the <a href="https://pushshift.io/api-parameters/" target="_blank">pushlift API</a> to acess Reddit's data.
+                I chose to include posts and comments from the subreddits "MachineLearning", "webdev", "bigdata", "datascience", "analytics" and "ArtificialInteligence". 
                 I decided to use data from the last 2 years, to get a somewhat recent view on things. I also decided only to include posts and 
                 comments that have as least as many likes as dislikes. This might be overcautious, since most of the time the comment
                 was probably not downvoted because the technologies named should not appear together. Under the given requirements
@@ -175,13 +179,19 @@
                 together only if they appear in the same post/comment. 
                 2: Combine contents of a post and its comments. Either "globally", by just combining all of their contents or 
                 by building several "local" combinations, in which each comment would be combined only with its father comment (which 
-                could be the original post). I will start by first analyzing each post and each comment individually, since it appears more
+                could be the original post).<br> 
+                I will start by first analyzing each post and each comment individually, since it appears more
                 straightforward. A post or content has an effect on the outcome of the model, if at least two different technologies appear in it. Of 
                 the more than 1 million posts and comments, only about 9000 contained at least two of the technologies that I searched for (the list of technologies
                 that are searched for are listed in the "technologies.json" file in the 
-                <a href="https://github.com/HannoMaximilian/AnalyticsTechnologyMap" target="_blank">projects repository</a>)
-                <div style="padding-top: 40px; padding-bottom: 40px;"><img src="projects/TechnologyMap/heatmap.png" class="img-fluid"></div>
-
+                <a href="https://github.com/HannoMaximilian/AnalyticsTechnologyMap" target="_blank">projects repository</a>).
+                The following heatmap shows, how often two technologies appeared together in a post or comment. Note that many constellations appeared
+                much more than 20 times.
+                <div style="padding-top: 20px; padding-bottom: 20px;"></div>
+                <figure style="padding-top: 20px; padding-bottom: 20px;">
+                    <img src="projects/TechnologyMap/heatmap.png" class="img-fluid">
+                    <figcaption style="text-align: center; font-size: small;">Co-occurrence heatmap</figcaption>
+                </figure>
 
 
             </p>
