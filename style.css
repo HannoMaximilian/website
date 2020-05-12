@@ -14,7 +14,7 @@
 }
 
 p {
-  font-size: smaller;
+  /*font-size: smaller;
   /*---Change font? --*/
 
 }
@@ -31,7 +31,7 @@ body {
   background-color: grey;
   position: absolute;
   height: 100px;
-  padding: 30px;
+  padding-top: 15px;
   bottom: 0;
   width: 100%;
   clear: both;
