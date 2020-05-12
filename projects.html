@@ -40,7 +40,7 @@
 <!-- Description-->
 <div class="container-fluid"  style="padding-top: 30px;">   <!-- background-color: whitesmoke;-->
     <div class="row justify-content-center">   <!--style="max-width: 800px;"-->
-    <div class="col-xl-5 col-lg-8 col-md-10 pb-5">
+    <div class="col-xl-7 col-lg-9 col-md-10 col-xs-11  pb-5">
         <h2 class="display-5">Projects</h1>
         <p>
             This is a place where I will present projects that I am persuing privately.<br>
@@ -49,9 +49,6 @@
             I will not present them here. I also do not feel like redoing open projects I did in the past, so this page will only<br>
             contain projects that I started during the time of building this website. For any further information on projects<br>
             listed in my CV or on my LinkedIn page, please reach out to me.<br><br>
-            In general, I try to go with the easiest way when programming. I am sure there are many more elegant and  ways<br>
-            to write the code that I am using but I don't really see the point in for example writing some sophisticated vectorized version<br>
-            when the script is run once and a loop is good enough.
         </p>
 </div>
 </div>
@@ -62,7 +59,7 @@
 <div class="container-fluid"  style="padding-top: 30px; padding-bottom: 30px; background-color: whitesmoke; border-top: 1px solid black;">   <!-- background-color: whitesmoke;-->
     <div class="row justify-content-center x">   <!--style="max-width: 800px;"-->
         <div class="col-xl-6 col-lg-7 col-md-8 col-xs-11 pb-1">
-        <h4 class="project_header" >Analytics Technology Map</h4>
+        <h3 class="project_header" >Analytics Technology Map</h3>
         <p>28.04.2020</p>
         <a href="https://github.com/HannoMaximilian/AnalyticsTechnologyMap" target="_blank">Github Repository of project</a>
         </div>
@@ -71,21 +68,19 @@
     <!-- Desciption-->
     <div class="row justify-content-center" style="padding-left:5px;">
         <div class="col-xl-6 col-lg-9 col-md-10 col-xs-11 pb-1">
-            <h5>Description</h5>
+            <h4>Description</h4>
             <p>The goal of this project is to create a map of technologies that are related to Data Analytics. This includes 
-                database technolgies, data processing technologies and data visualization tools. Technologies should appear close to each other on the
-                map if they are either similar (HBase, Cassandra) or if they are often used together (HBase, Phoenix). I originally got the idea when working 
-                at a consultancy where we programmed an Artificial Intelligence that would make suggestions on which consultant should be staffed on a given project.
-                In order to generate suggestions, we mapped all available consultants in a high dimensional vectorspace using word2vec. We then mapped each project in
+                database technolgies, data processing technologies and data visualization tools. I hope to gather some insight into how Technologies are used in the real world, 
+                and how the application of certain Technologies change over time.Technologies should appear close to each other on the
+                map if they are often named together. Technologies are generally named together when discussing alternatives  (HBase, Cassandra) or if 
+                they are often used together (HBase, Phoenix). The ML/AI technology that is going to serve as foundation for this project is word embedding.
+                Basically, algorithms like word2vec assign a vector to every word in a text corpus. The vectors of words that often appear together will be close to
+                each other in the vector space. Here is a basic description of how a typical <a href="https://pathmind.com/wiki/word2vec">algorithm for word embeddings</a> works.
+                I originally got the idea when working at a consultancy where we programmed an Artificial Intelligence that would make suggestions
+                 on which consultant should be staffed on a given project.
+                In order to generate suggestions, I mapped all available consultants in a high dimensional vectorspace. I then mapped each project in
                 the same vectorspace and calculated the consultants that were closest. (This is a simplified version of how the final product worked).
-                <a href="https://pathmind.com/wiki/word2vec">Here is a basic description of how these vectors can be generated</a>
-                talk of David Kriesel, in which he described his works related to the analysis of the articles of a large german newspaper.
-                His talk is on German, but there is an English version and I highly recommend watching it, since it is very 
-                interesting to see not only his visualizations and results, but also what is possible to derive from metadata.<br>
-                <a href="https://www.youtube.com/watch?v=-YpwsdRKt8Q" style="color:darkblue;">German version,</a>
-                <a href="https://www.youtube.com/watch?v=bYviBstTUwo" style="color:darkblue;"> English version</a><br>
-                In the visualization that serves as an example for what I am trying to do, David Kriesesl maps the Keywords of news articles
-                (policics, economy, Angela Merkel) based on how often they appear as keywords together.
+
             </p>            
         </div>
     </div>
@@ -103,42 +98,47 @@
     <!-- Approach-->
     <div class="row justify-content-center" style="padding-left:5px;">
         <div class="col-xl-6 col-lg-9 col-md-10 col-xs-11 pb-1">
-            <h5>Initial Approach</h5>
+            <h4>First Version</h4>
             <div style="padding-left: 10px;">
+                <h5>Approach</h5>
                 <p style="font-weight: bold; margin-top: 10px; margin-bottom: 0px;">Data</p>
                 <p style="margin-top: 0px; margin-bottom: 0px;">
                     As a data source, I need a large amount of text in which the application of technologies that are interesting to us are described.
-                    Ideally, the data would consist of  
-                    As a data scource, I am going to use posts and 
+                    Ideally, the data would be diverse in the way that different Analytics/ML/AI Use Cases are described.
+                    As a first data scource, I am going to use posts and 
                     comments from reddit.com.<br>
                     Reddit.com is a network of communities based on people's interests.
                     There are several subreddits, which make up subcommunities in which people share content and ask questions.
-                    Other members of a subreddit can see and comment on the posts. 
+                    Other members of a subreddit can see and comment on the posts. <br>
+                    <i class="fa fa-angle-right" style="color:red; padding-top: 5px; font-size: 24px;"></i> Get comments and posts from reddit.com
                 </p> 
                 <p style="font-weight: bold; margin-top: 10px; margin-bottom: 0px;">Analytics</p>
                 <p style="margin-top: 0px; margin-bottom: 0px;">
                     Since the raw data that I am going to use is not structured in any way, I am going to extract features in a very simple way.
                     I am going to write a json file with technologies that I want to include in my analysis. For each technology, I am going to
                     specify aliases (Spark = Spark2, vue = vue.js, S3 = Simple Storage Service) and the corresponding technology family (Spark: Analytics, MongoDB: Database).
-
-                    Use a structured list of technologies that should be considered structured in a json file.
-                    This lets me use aliases . Then look through
-                    each post and through each comment and find out if the technologies that I have specified apppeared in the post/comment.
+                    Using aliases assures that I do not create two different embeddings for the same technology, and that I don't miss the appearance of a technology 
+                    in the text.
+                    Then look through each post and through each comment and find out if the technologies that I have specified apppeared in the post/comment.
                     This has one major drawback: Some technolgies that I would like to include have names that correspond to English words, such as 
                     the programming language Go and the Javascript framework React. A possible way around would be to have a Natural Language Processing model
                     analyze which of the words or group of words in the comments or posts correspond to a named entity (Basically, which of the words are names).
                     I will experiment with ways to deal with the drawback later, and will ignore "problematic" technolgies in the first version of the technology map.
+                    When the data is structured, and all posts and comments are converted into lists of technologies that were mentioned in the respective post or comment,
+                    I am going to use a word embedding algorithm like word2vec to map the technologies into a vectorspace. <br>
+                    <i class="fa fa-angle-right" style="color:red; padding-top: 5px; font-size: 24px;"></i> Extract technologies by using a structured list of technologies
+                    to look for in comments and posts, then use word2vec to generate embeddings for the technologies.
+
                 </p>
                 <p style="font-weight: bold; margin-top: 10px; margin-bottom: 0px;">Testing and Visualization</p>
                 <p style="margin-top: 0px; margin-bottom: 0px;">
                     In general, Natural Language Processing models use a vectorspace for the embedding of words or phrases that is high-dimensional, typically in the hundreds.
-                    We do not need to map the large number of words, that languages normally use, into our vectorspace. Therefore, our vectorspace will be much smaller
+                    I do not need to map the large number of words, that languages normally use, into a vectorspace. Therefore, the vectorspace of this project will be much smaller
                     in terms of its dimensionality. In my past experience, the optimal number of dimensions for a vectorspace that had to contain 1000-2000 different vectors was 
-                    in the range of 10-20. 
-                    If we want to visualize the entire map, we would have to find a way to plot all technologies in two dimensions.
-                    If we decide to just use a two dimensional map, we can use Gephi, the tool that David Kriesel used a tool for his visualization. Fortunately,
-                    he gives a description of how he used the tool on his website.
-                    There is still a lot of work ...given... for using the tool.<br>
+                    in the range of 10-20. My technology map will have an even smaller number of technolgies taken into account (especially the first version) so the dimensionality necessary
+                    to get good results is probably very low.
+                    If we want to visualize the entire map, we would have to find a way to plot all technologies in two dimensions for example by using <a href="https://gephi.org/">Gephi</a>. 
+                    <br>
                     <i class="fa fa-angle-right" style="color:red; padding-top: 5px; font-size: 24px;"></i> Use basic visualizations to test if our model is working.
                     For example, test which are the technologies closest to a given test technology and visualize the distance of each of the resulting technologies to our
                     test technology (maybe just use a basic table). If results are good, see how low we can go in terms of the vectorspaces dimensionality. If d=2 still gives good
@@ -151,8 +151,8 @@
     <!-- Horizontal red line-->
     <div class="container-fluid" style="padding-top:0px; padding-bottom:0px; margin-top: 0px; margin-bottom: 0px;">
         <div class="row justify-content-center"">
-            <div class="col-lg-6 col-xs-8 pb-1" >
-                <hr style="border-top: 1px solid red;">
+            <div class="col-lg-4 col-xs-6 pb-1" >
+                <hr style="border-top: 1px solid blue;">
             </div>
             <div class="col-lg-4 "></div>
         </div>
@@ -161,6 +161,7 @@
     <!-- Current status-->
     <div class="row justify-content-center" style="padding-left:5px;">
         <div class="col-xl-6 col-lg-9 col-md-10 col-xs-11 pb-1">
+            <div style="padding-left: 10px;">
             <h5>Current status</h5>
             <p>  I used the <a href="https://pushshift.io/api-parameters/" target="_blank">pushlift API</a> to acess old reddit data.
                 I chose to include posts and comments from subreddits "MachineLearning", "webdev", "bigdata", "datascience", "analytics" and "ArtificialInteligence". 
@@ -178,13 +179,12 @@
                 the more than 1 million posts and comments, only about 9000 contained at least two of the technologies that I searched for (the list of technologies
                 that are searched for are listed in the "technologies.json" file in the 
                 <a href="https://github.com/HannoMaximilian/AnalyticsTechnologyMap" target="_blank">projects repository</a>)
-                <div><img src="projects/TechnologyMap/heatmap.png" class="img-fluid"></div>
+                <div style="padding-top: 40px; padding-bottom: 40px;"><img src="projects/TechnologyMap/heatmap.png" class="img-fluid"></div>
 
-                Bad examples: "I don’t believe Flume or Spark supports Hive ACID yet, but I could be wrong."<br>
-                "So HIVE isn't really SQL, it's a SQL based query language that translates into MapReduce, TEZ, Spark 
-                or some other distributed execution job. Which all of these execution engines were designed around ETL on large data sets."
 
-            </p>            
+
+            </p>
+            </div>            
         </div>
     </div>
 </div>
@@ -195,12 +195,14 @@
 <div class="container-fluid"  style="padding-top: 30px; background-color: white; border-top: 1px solid black;">   <!-- background-color: whitesmoke;-->
     <div class="row justify-content-center x">   <!--style="max-width: 800px;"-->
         <div class="col-xl-6 col-lg-7 col-md-8 col-xs-11 pb-1">
-        <h4 class="project_header" >My Website</h4><p>28.04.2020</p>
+        <h3 class="project_header" >My Website</h3>
+        <p>28.04.2020</p>
+        <a href="https://github.com/HannoMaximilian/website">Github Repository</a>
         </div>
     </div>
-
+    
     <!-- Desciption-->
-    <div class="row justify-content-center" style="padding-left:5px;">
+    <div class="row justify-content-center" style="padding-left:5px; padding-bottom: 150px;">
         <div class="col-xl-6 col-lg-9 col-md-10 col-xs-11 pb-1">
             <h5>Description</h5>
             <p>I built this static website using mainly HTML and Bootstrap with just very little custom CSS. If I want to include a web app in the future
