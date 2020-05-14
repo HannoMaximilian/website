@@ -11,6 +11,10 @@
     <link href="style.css" rel="stylesheet">
     <title>Projects</title>
     <link rel="icon" href="./img/hz_3.png">
+
+
+
+
 </head>
 
 <body>
@@ -65,9 +69,50 @@
         </div>
     </div>
 
+    <!-- Current Version -->
+    <div class="row justify-content-center x">   <!--style="max-width: 800px;"-->
+        <div class="col-xl-3  col-sm-9 col-xs-11 pb-1">
+            <figure style="padding-top: 20px; padding-bottom: 20px;">
+                <img id="myImg1" src="img/projects/TechnologyMap/3D_iter50_perplex30.png" class="img-fluid clickable_image">
+                <figcaption style="text-align: center; font-size: normal;">Current Version (Version 1)</figcaption>
+            </figure>
+
+                        <!-- The Modal -->
+            <div id="myModal1" class="modal">
+                <span id="close1" class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption1" class="caption"></div>
+            </div>
+            <script>
+                // Get the modal
+                var modal = document.getElementById("myModal1");
+                
+                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                var img = document.getElementById("myImg1");
+                var modalImg = document.getElementById("img01");
+                var captionText = document.getElementById("caption1");
+                img.onclick = function(){
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = this.alt;
+                    }
+                
+                // Get the <span> element that closes the modal
+                var span = document.getElementById("close1");
+                
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() { 
+                    modal.style.display = "none";
+                    }
+            </script>
+        </div>
+    </div>
+
     <!-- Desciption-->
     <div class="row justify-content-center" style="padding-left:5px;">
         <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
+
+
             <h4>Description</h4>
             <p>The goal of this project is to create a map of technologies that are related to Data Analytics. This includes 
                 database technolgies, data processing technologies and data visualization tools. I hope to gather some insight into how those technologies are used in the real world, 
@@ -166,38 +211,128 @@
     <div class="row justify-content-center" style="padding-left:5px;">
         <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
             <div style="padding-left: 20px;">
-            <h5>Current status</h5>
-            <p>12.05.2020</p>
-            <p> I used the <a href="https://pushshift.io/api-parameters/" target="_blank">pushlift API</a> to acess Reddit's data.
-                I chose to include posts and comments from the subreddits "MachineLearning", "webdev", "bigdata", "datascience", "analytics" and "ArtificialInteligence". 
-                I decided to use data from the last 2 years, to get a somewhat recent view on things. I also decided only to include posts and 
-                comments that have as least as many likes as dislikes. This might be overcautious, since most of the time the comment
-                was probably not downvoted because the technologies named should not appear together. Under the given requirements
-                (subreddit, time, vote) I get more than 70.000 posts and more than 900.000 comments with a content that contain more than 15 characters.
-                There are two ways how the data can be used:<br>
-                1: Treat every post and every comment individually. This would mean that I count two technologies as appearing
-                together only if they appear in the same post/comment. 
-                2: Combine contents of a post and its comments. Either "globally", by just combining all of their contents or 
-                by building several "local" combinations, in which each comment would be combined only with its father comment (which 
-                could be the original post).<br> 
-                I will start by first analyzing each post and each comment individually, since it appears more
-                straightforward. A post or content has an effect on the outcome of the model, if at least two different technologies appear in it. Of 
-                the more than 1 million posts and comments, only about 9000 contained at least two of the technologies that I searched for (the list of technologies
-                that are searched for are listed in the "technologies.json" file in the 
-                <a href="https://github.com/HannoMaximilian/AnalyticsTechnologyMap" target="_blank">projects repository</a>).
-                The following heatmap shows, how often two technologies appeared together in a post or comment. Note that many constellations appeared
-                much more than 20 times.
-                <div style="padding-top: 20px; padding-bottom: 20px;"></div>
-                <figure style="padding-top: 20px; padding-bottom: 20px;">
-                    <img src="img/projects/TechnologyMap/heatmap.png" class="img-fluid">
-                    <figcaption style="text-align: center; font-size: small;">Co-occurrence heatmap</figcaption>
-                </figure>
-
-
-            </p>
+                <h5>Implementation</h5>
+                <p>14.05.2020</p>
+                <p> I used the <a href="https://pushshift.io/api-parameters/" target="_blank">pushlift API</a> to acess Reddit's data.
+                    I chose to include posts and comments from the subreddits "MachineLearning", "webdev", "bigdata", "datascience", "analytics" and "ArtificialInteligence". 
+                    I decided to use data from the last 2 years, to get a somewhat recent view on things. I also decided only to include posts and 
+                    comments that have as least as many likes as dislikes. This might be overcautious, since most of the time the comment
+                    was probably not downvoted because the technologies named should not appear together. Under the given requirements
+                    (subreddit, time, vote) I get more than 70.000 posts and more than 900.000 comments with a content that contain more than 15 characters.
+                    There are two ways how the data can be used:<br>
+                    1: Treat every post and every comment individually. This would mean that I count two technologies as appearing
+                    together only if they appear in the same post/comment. 
+                    2: Combine contents of a post and its comments. Either "globally", by just combining all of their contents or 
+                    by building several "local" combinations, in which each comment would be combined only with its father comment (which 
+                    could be the original post).<br> 
+                    I will start by first analyzing each post and each comment individually, since it appears more
+                    straightforward. A post or content has an effect on the outcome of the model, if at least two different technologies appear in it. Of 
+                    the more than 1 million posts and comments, only about 22.000 contained at least two of the technologies that I searched for (the list of technologies
+                    that are searched for are listed in the "technologies.json" file in the 
+                    <a href="https://github.com/HannoMaximilian/AnalyticsTechnologyMap" target="_blank">projects repository</a>).
+                    The following heatmap shows, how often two technologies appeared together in a post or comment. Note that many constellations appeared
+                    much more than 20 times.
+                </p>
             </div>            
         </div>
     </div>
+        <!-- Heatmap -->
+    <div class="row justify-content-center x">   <!--style="max-width: 800px;"-->
+        <div class="col-xl-5  col-sm-9 col-xs-11 pb-1">
+            <figure style="padding-top: 20px; padding-bottom: 20px;">
+                <img id="myImg2" src="img/projects/TechnologyMap/heatmap.png" class="img-fluid clickable_image">
+                <figcaption style="text-align: center; font-size: normal;">Co-occurence heatmap</figcaption>
+            </figure>
+
+                        <!-- The Modal -->
+            <div id="myModal2" class="modal">
+                <span id="close2" class="close">&times;</span>
+                <img class="modal-content" id="img02">
+                <div id="caption2" class="caption"></div>
+            </div>
+            <script>
+                // Get the modal
+                var modal2 = document.getElementById("myModal2");
+                
+                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                var img2 = document.getElementById("myImg2");
+                var modalImg2 = document.getElementById("img02");
+                var captionText2 = document.getElementById("caption2");
+                img2.onclick = function(){
+                    modal2.style.display = "block";
+                    modalImg2.src = this.src;
+                    captionText2.innerHTML = this.alt;
+                    }
+                
+                // Get the <span> element that closes the modal
+                var span2 = document.getElementById("close2");
+                
+                // When the user clicks on <span> (x), close the modal
+                span2.onclick = function() { 
+                modal2.style.display = "none";
+                }
+            </script>
+        </div>
+    </div>
+    <div class="row justify-content-center" style="padding-left:5px;">
+        <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
+            <div style="padding-left: 20px;">
+                <p>For the embedding of the words I used 
+                    <a href="https://radimrehurek.com/gensim/models/word2vec.html", target="_blank">Gensim's implementation of Word2Vec</a>. 
+                    Each technology was treated as a word in a sentence.
+                    The "sentence" was the collection of technologies that were named in a comment or post. 
+                    The word2vec algorithm allows the user to define the number of dimensions that the vector space is going to have.
+                    After trying out different numbers of dimensions, I decided that the best results were achieved with three to four dimensions.
+                    To visualize the embedding space, I used the t-Distributed Stochastic Neighbor Embedding algorithm implemented in
+                    <a href="https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html" target="_blank">sklearn.manifold.TSNE</a>
+                    to reduce the dimensionality of the word vector to just two dimensions which I was then able to plot.
+                    The "perplexity" parameter of the t-SNE algorithm can easily be optimized by comparing the resulting vizalization to 
+                    the technologies that are listed as closest to each other when using Gensims most_similar() function.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Analytics Map V1 -->
+    <div class="row justify-content-center x">   <!--style="max-width: 800px;"-->
+        <div class="col-xl-3  col-sm-9 col-xs-11 pb-1">
+            <figure style="padding-top: 20px; padding-bottom: 20px;">
+                <img id="myImg3" src="img/projects/TechnologyMap/3D_iter50_perplex30.png" class="img-fluid clickable_image">
+                <figcaption style="text-align: center; font-size: normal;">Analytics Map Version 1</figcaption>
+            </figure>
+
+                        <!-- The Modal -->
+            <div id="myModal3" class="modal">
+                <span id="close3" class="close">&times;</span>
+                <img class="modal-content" id="img03">
+                <div id="caption3" class="caption"></div>
+            </div>
+            <script>
+                // Get the modal
+                var modal = document.getElementById("myModal3");
+                
+                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                var img = document.getElementById("myImg3");
+                var modalImg = document.getElementById("img03");
+                var captionText = document.getElementById("caption3");
+                img.onclick = function(){
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = this.alt;
+                    }
+                
+                // Get the <span> element that closes the modal
+                var span = document.getElementById("close3");
+                
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() { 
+                    modal.style.display = "none";
+                    }
+            </script>
+        </div>
+    </div>
+
+
 </div>
 
 
