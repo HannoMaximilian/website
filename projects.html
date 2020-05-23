@@ -60,7 +60,7 @@
 
 
 <!-- Analytics Technology Map-->
-<div class="container-fluid"  style="padding-top: 30px; padding-bottom: 30px; background-color: whitesmoke; border-top: 1px solid black;">   <!-- background-color: whitesmoke;-->
+<div class="container-fluid"  style="padding-top: 30px; padding-bottom: 100px; background-color: whitesmoke; border-top: 1px solid black;">   <!-- background-color: whitesmoke;-->
     <div class="row justify-content-center x">   <!--style="max-width: 800px;"-->
         <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
         <h3 class="project_header" >Analytics Technology Map</h3>
@@ -71,40 +71,15 @@
 
     <!-- Current Version -->
     <div class="row justify-content-center x">   <!--style="max-width: 800px;"-->
-        <div class="col-xl-3  col-sm-9 col-xs-11 pb-1">
+        <div class="col-xl-5  col-sm-9 col-xs-11 pb-1">
+            <!-- Technology Map V2 -->
             <figure style="padding-top: 20px; padding-bottom: 20px;">
-                <img id="myImg1" src="img/projects/TechnologyMap/3D_iter50_perplex30.png" class="img-fluid clickable_image">
-                <figcaption style="text-align: center; font-size: normal;">Current Version (Version 1)</figcaption>
+                <a href="./img/projects/TechnologyMap/techmap_V2_threshold015.html" target="_blank">
+                <img src="img/projects/TechnologyMap/TechnologyMapV2.jpg"  class="img-fluid clickable_image">
+                </a>
+                <figcaption style="text-align: center; font-size: normal;"><b>Current Version: Technology Map V2 </b><br>Purple: Visualization and BI, Red: Data Processing, Blue: Database, Yellow: Cloud Service, 
+                Olive: Web App, Black: Technology Family, Grey: Othes</figcaption>
             </figure>
-
-                        <!-- The Modal -->
-            <div id="myModal1" class="modal">
-                <span id="close1" class="close">&times;</span>
-                <img class="modal-content" id="img01">
-                <div id="caption1" class="caption"></div>
-            </div>
-            <script>
-                // Get the modal
-                var modal = document.getElementById("myModal1");
-                
-                // Get the image and insert it inside the modal - use its "alt" text as a caption
-                var img = document.getElementById("myImg1");
-                var modalImg = document.getElementById("img01");
-                var captionText = document.getElementById("caption1");
-                img.onclick = function(){
-                    modal.style.display = "block";
-                    modalImg.src = this.src;
-                    captionText.innerHTML = this.alt;
-                    }
-                
-                // Get the <span> element that closes the modal
-                var span = document.getElementById("close1");
-                
-                // When the user clicks on <span> (x), close the modal
-                span.onclick = function() { 
-                    modal.style.display = "none";
-                    }
-            </script>
         </div>
     </div>
 
@@ -144,6 +119,7 @@
         </div>
     </div>
 
+    <!-- First Version-->
     <!-- Approach-->
     <div class="row justify-content-center" style="padding-left:5px;">
         <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
@@ -179,7 +155,7 @@
                     to look for in comments and posts, then use word2vec to generate embeddings for the technologies.
 
                 </p>
-                <p style="font-weight: bold; margin-top: 10px; margin-bottom: 0px;">Testing and Visualization</p>
+                <p style="font-weight: bold; margin-top: 10px; margin-bottom: 0px;">Visualization</p>
                 <p style="margin-top: 0px; margin-bottom: 0px;">
                     In general, Natural Language Processing models use a vectorspace for the embedding of words or phrases that is high-dimensional, typically in the hundreds.
                     I do not need to map the large number of words, that languages normally use, into a vectorspace. Therefore, the vectorspace of this project will be much smaller
@@ -190,14 +166,13 @@
                     <br>
                     <i class="fa fa-angle-right" style="color:red; padding-top: 5px; font-size: 24px;"></i> Use basic visualizations to test if our model is working.
                     For example, test which are the technologies closest to a given test technology and visualize the distance of each of the resulting technologies to our
-                    test technology (maybe just use a basic table). If results are good, see how low we can go in terms of the vectorspaces dimensionality. If d=2 still gives good
-                    enough, try out Gephi.
+                    test technology (maybe just use a basic table). If results are good, see how low we can go in terms of the vectorspaces dimensionality.
                 </p>
             </div>        
         </div>
     </div>
 
-    <!-- Horizontal red line-->
+    <!-- Horizontal blue line-->
     <div class="container-fluid" style="padding-top:0px; padding-bottom:0px; margin-top: 0px; margin-bottom: 0px;">
         <div class="row justify-content-center"">
             <div class="col-lg-5 col-xs-7 pb-1" >
@@ -332,6 +307,151 @@
         </div>
     </div>
 
+    <!-- Discussion of Version 1 -->
+    <div class="row justify-content-center" style="padding-left:5px;">
+        <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
+            <div style="padding-left: 20px;">
+                <p>The visualization indicates that the posts and comments from reddit hold usefull information about the investigated technologies.
+                    The combination of word2vec and t-SNE was able to retrieve and visualize the underlying information. <br>
+                    The relative position of most of the technologies makes sense intuitively. Most database technologies are close to each other,
+                    as are visualization tools. There is one group which mainly consists of Big Data processing technologies (all the Apache stuff, Dask, Flink)
+                     and another group which consists mainly of computing platforms (Amazon Lightsail, AWS, Google Clud Platform, Azure). The computing platform
+                     Amazon EMR is much closer to the processing technologies than to the other computing platforms. A reason could be that Amazon EMR is 
+                     used for the processing of Big Data, and it might appear more often in the processing setting than in the platform setting.
+                     The location of technology family names 
+                     that I included in the analysis (Database, SQL Database, NoSQL Database, Cloud, Big Data, Machine Learning, Visualization) appears to make sense as well.<br>
+                     Locations that were surprising to me are:
+                </p>
+                    <ul>
+                     <li>Amazon Sagemaker and Qlik being quite far off</li>
+                     <li>d3.js being so much closer to the visualization tools than to the Javascript frameworks</li>
+                     <li>Microsoft Access bein so close to the visualization tools</li>
+                     <li>SQL and NoSQL technologies being so close to each other</li>
+                    </ul>
+                <p>
+                    Although the relative position of most technologies makes sense, it is not possible to understand where the position comes from.
+                    Are two technologies close to each other because they often appeared together in a post/comment, or just because they often appeared
+                    together in a post/comment with the same third technology?<br>
+                    In the next version of the visualization, I want to include edges between the nodes that show how often the two connected nodes/technologies 
+                    have appeard together in a sentence. It would also be interesting to set the size of the nodes relative to how often the respective technology appeared
+                    altogether.
+
+                </p>         
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Horizontal red line-->
+    <div class="container-fluid" style="padding-top:0px; padding-bottom:0px; margin-top: 0px; margin-bottom: 0px;">
+        <div class="row justify-content-center"">
+            <div class="col-lg-6 col-xs-8 pb-1" >
+                <hr style="border-top: 1px solid red;">
+            </div>
+            <div class="col-lg-4 "></div>
+        </div>
+    </div>
+    <!-- Second Version-->
+    <!-- Approach-->
+    <div class="row justify-content-center" style="padding-left:5px;">
+        <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
+            <h4>Second Version</h4>
+            <div style="padding-left: 20px;">
+                <h5>Approach</h5>
+                <p style="font-weight: bold; margin-top: 10px; margin-bottom: 0px;">Data</p>
+                <p style="margin-top: 0px; margin-bottom: 0px;">
+                    Use the same data source as before.
+                </p>
+                <p style="font-weight: bold; margin-top: 10px; margin-bottom: 0px;">Analytics</p>
+                <p style="margin-top: 0px; margin-bottom: 0px;">
+                    Use the same way of preprocessing posts and comments as before.
+                </p>
+
+                <p style="font-weight: bold; margin-top: 10px; margin-bottom: 0px;">Visualization</p>
+                <p style="margin-top: 0px; margin-bottom: 0px;">
+                    Visualize edges between nodes/technologies, whose thickness indicate how often the two 
+                    corresponding technologies appeared together. If the selected visualization implementation allows it,
+                    adjust the size of the nodes dependent on how often the respective technology has appeared in total.
+                    It would also be interesting to colour the nodes dependent on the technology family that the respective
+                    technology belongs to (Database, Cloud, Visualization...).
+            </div>
+        </div>
+    </div>
+
+    <!-- Horizontal blue line-->
+    <div class="container-fluid" style="padding-top:0px; padding-bottom:0px; margin-top: 0px; margin-bottom: 0px;">
+        <div class="row justify-content-center"">
+            <div class="col-lg-5 col-xs-7 pb-1" >
+                <hr style="border-top: 1px solid blue;">
+            </div>
+            <div class="col-lg-4 "></div>
+        </div>
+    </div>
+
+    <!-- Implementation-->
+    <div class="row justify-content-center" style="padding-left:5px;">
+        <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
+            <div style="padding-left: 20px;">
+                <h5>Implementation</h5>
+                <p>16.05.2020</p>
+                <p>
+                    I found an <a href="https://github.com/rweng18/midsummer_network", target="_blank">example online</a>
+                    , where somebody created a network of the characters appearing in Shakespears play "A Midsummer Night's Dream" based on 
+                    how often each two characters appear together in a scene.
+                    I decided to use the same visualization technique. The first version of the technology map showed that it is possible to visualize
+                    the map in 2D. Following the given example, I used the
+                    <a href="https://networkx.github.io/documentation/networkx-1.9/reference/generated/networkx.drawing.layout.spring_layout.html" target="_blank">
+                    spring_layout from networkx</a> to generate the position of the nodes for the second version of the map. Instead of first mapping the technologies in a high dimensional
+                    vector space and then reducing the dimensionality for the visualization, the spring_layout algorithm will calculate the distribution of the technologies
+                    in 2D directly. In order to calculate each technologies/nodes location, it is necessary to define how "stong" the edge between each two nodes is. 
+                    The stronger the edge, the closer the two linked nodes are to each other in the visualization. Using the actual number of coappearances as 
+                    the strength of the edge makes all technologies that come up very often appear close to each other in the center of the map. To generate the shown map,
+                    I used a kind of relative importance:<br>
+                    <i>edgeweight_tech1_tech2 = (coappearances / appearances_tech1) + (coappearances / appearances_tech2)</i><br> 
+                    I also set a threshold of 0.15 for the edgeweight. If the edgeweight between two technologies was smaller than the threshold, the
+                    edge was neither visualized, nor was it taken into account when calculating the position of the nodes.
+                </p>
+            </div>
+        </div>
+        <div class="row justify-content-center x">   <!--style="max-width: 800px;"-->
+            <div class="col-xl-5  col-sm-9 col-xs-11 pb-1">
+                <!-- Technology Map V2 -->
+                <figure style="padding-top: 10px; padding-bottom: 10px;">
+                    <a href="./img/projects/TechnologyMap/techmap_V2_threshold015.html" target="_blank">
+                    <img src="img/projects/TechnologyMap/TechnologyMapV2.jpg"  class="img-fluid clickable_image">
+                    </a>
+                    <figcaption style="text-align: center; font-size: normal; margin-top: 10px;"><b>Technology Map V2 </b><br>Purple: Visualization and BI, Red: Data Processing, Blue: Database, Yellow: Cloud Service, 
+                    Olive: Web App, Black: Technology Family, Grey: Othes</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="row justify-content-center" style="padding-left:5px;">
+            <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
+                <div style="padding-left: 20px; padding-bottom: 80px;">
+                    <p>
+                        The size of the nodes has been set based on the squareroot of how often the respective technology 
+                        apeared in all comments and posts. If a node is double the size of another node, its technology appeared 
+                        four times as often. Note that not every actual appearance of a technology in a post or comment is 
+                        recognized as such by my "technology extraction pipeline". When people talk about React.js, they often 
+                        just write React. Since react is also a verb, I am currently just counting appearances of React.js. 
+                        The Cloud Service group of technologies is consisting mainly of Amazon services. 
+                        Google and Azure services often do not have a specific name, such as Amazon's S3 or EC2. This makes it 
+                        harder to detect the mentioning of a Azure or Google Service. 
+                        The color of the nodes is based on the type of technology. For some technologies, 
+                        it was difficult to decide which family they belonged to. DynamoDB for example is an Amazon Cloud Service,
+                        but also a Database. For a zoomable version of the map,
+                        please click on the image.
+                    </p>
+                    <p>
+                        The second version of the technology map gives much more insight into how the technologies 
+                        are discussed on reddit. After using a different method to place the technologies in the 2D plot,
+                        we see groups that are similar to the groups that we saw in the first version of the technology map 
+                        (Database, Big Data Processing, Visualization and BI). Some technologies are not part of the new version,
+                        because I increased the minimum number of appearances for a technology to have to be included.
+                    </p>
+            </div>
+        </div>
+    </div>
 
 </div>
 

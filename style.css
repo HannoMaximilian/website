@@ -26,8 +26,35 @@ body {
   position: relative;
 }
 
+/*---Zoomable Picture stuff --*/
+/*---Currently not used --*/
+
+.click-zoom input[type=checkbox] {
+  display: none
+}
+
+.click-zoom img {
+  margin: 100px;
+  transition: transform 0.25s ease;
+  cursor: zoom-in
+}
+
+.click-zoom input[type=checkbox]:checked~img {
+  transform: scale(2);
+  cursor: zoom-out
+}
+
 
 /*---Clickable Picture stuff --*/
+
+.clickable_project {
+  border: 1px black solid;
+  border-radius: 10px;
+}
+
+.clickable_project:hover {
+  border-color: red;
+}
 
 .clickable_image {
   border-radius: 5px;
