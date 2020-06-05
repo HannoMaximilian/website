@@ -41,444 +41,74 @@
     </div>
 </nav>
 
-<!-- Description-->
-<div class="container-fluid"  style="padding-top: 30px; padding-bottom: 30px;">   <!-- background-color: whitesmoke;-->
-    <div class="row justify-content-center">   <!--style="max-width: 800px;"-->
-    <div class="col-xl-9 col-sm-10 col-xs-11  pb-5">
-        <h2 class="display-5">Projects</h1>
-        <p>
-            This is a place where I will present projects that I am persuing privately.<br>
-            Since the programming projects I have been a part of in the past were mostly confidential and only published in private
-            Git repositories (if at all),
-            I will not present them here.<br>I also do not feel like redoing older projects I did in the past, so this page will only<br>
-            contain projects that I started during the time of building this website. For any further information on projects<br>
-            listed in my CV or on my LinkedIn page, please reach out to me.<br><br>
-        </p>
-</div>
-</div>
-</div>
+
+<!-- Project List-->
 
 
 <!-- Analytics Technology Map-->
-<div class="container-fluid"  style="padding-top: 30px; padding-bottom: 100px; background-color: whitesmoke; border-top: 1px solid black;">   <!-- background-color: whitesmoke;-->
-    <div class="row justify-content-center x">   <!--style="max-width: 800px;"-->
-        <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
-        <h3 class="project_header" >Analytics Technology Map</h3>
-        <p>02.05.2020</p>
-        <a href="https://github.com/HannoMaximilian/AnalyticsTechnologyMap" target="_blank">Github Repository of project</a>
-        </div>
-    </div>
-
-    <!-- Current Version -->
-    <div class="row justify-content-center x">   <!--style="max-width: 800px;"-->
-        <div class="col-xl-5  col-sm-9 col-xs-11 pb-1">
-            <!-- Technology Map V2 -->
-            <figure style="padding-top: 20px; padding-bottom: 20px;">
-                <a href="./img/projects/TechnologyMap/techmap_V2_threshold015.html" target="_blank">
-                <img src="img/projects/TechnologyMap/TechnologyMapV2.jpg"  class="img-fluid clickable_image">
-                </a>
-                <figcaption style="text-align: center; font-size: normal;"><b>Current Version: Technology Map V2 </b><br>Purple: Visualization and BI, Red: Data Processing, Blue: Database, Yellow: Cloud Service, 
-                Olive: Web App, Black: Technology Family, Grey: Othes</figcaption>
-            </figure>
-        </div>
-    </div>
-
-    <!-- Desciption-->
-    <div class="row justify-content-center" style="padding-left:5px;">
-        <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
-
-
-            <h4>Description</h4>
+<div class="container-fluid"  style="padding-top: 30px; padding-bottom: 30px; margin-top: 100px;">   <!-- background-color: whitesmoke;-->
+    <div class="row justify-content-center">   <!--style="max-width: 800px;"-->
+    <div id="project1" class="clickable_project col-xl-7 col-sm-10 col-xs-11  pb-5">
+        <a href="./projects/technologymap.html" ></a>
+        <h4 class="display-5" style="padding: 10px;">Analytics Technology Map</h4>
+        <span>
+            <img src="./img/projects/TechnologyMap/3D_iter50_perplex30.png" class="img-fluid" style="max-width: 20%; float: left; margin-right: 10px; vertical-align: middle;">
+        </span>
+        <span>
+            
             <p>The goal of this project is to create a map of technologies that are related to Data Analytics. This includes 
-                database technolgies, data processing technologies and data visualization tools. I hope to gather some insight into how those technologies are used in the real world, 
-                and how the application of certain technologies change over time. Technologies should appear close to each other on the
-                map if they are often named together by people discussing those technologies. 
-                Technologies are generally named together when discussing alternatives  (HBase, Cassandra) or if 
-                they are often used together (HBase, Phoenix). The ML/AI technology that is going to serve as foundation for this project is word embedding.
-                Basically, word embedding algorithms like word2vec assign a vector to every word in a text corpus. The vectors of words that often appear together will be close to
-                each other in the vector space. Here is a basic description of how a typical <a href="https://pathmind.com/wiki/word2vec">algorithm for word embeddings</a> works.
-                I originally got the idea when working at a consultancy where we programmed an Artificial Intelligence that would make suggestions
-                 on which consultant should be staffed on a given project.
-                In order to generate suggestions, we mapped all available consultants in a high dimensional vectorspace. The vector of each individual
-                consultant was dependent on their CV and the Skills that they possessed. We then generated a vector for each consulting project in
-                the same vectorspace and calculated the consultants that were closest. (This is a simplified version of how the final product worked)
-                For this project, instead of mapping all words found in a text corpus into the vector space, I will map only technologies that I have specified before.
-                Those technologies can consist of single or multiple words.
-
-            </p>            
-        </div>
+            database technolgies, data processing technologies and data visualization tools. 
+            </p>
+            <span style="color: green">Status: Ongoing</span>
+        </span>
     </div>
-
-    <!-- Horizontal red line-->
-    <div class="container-fluid" style="padding-top:0px; padding-bottom:0px; margin-top: 0px; margin-bottom: 0px;">
-        <div class="row justify-content-center"">
-            <div class="col-lg-6 col-xs-8 pb-1" >
-                <hr style="border-top: 1px solid red;">
-            </div>
-            <div class="col-lg-4 "></div>
-        </div>
-    </div>
-
-    <!-- First Version-->
-    <!-- Approach-->
-    <div class="row justify-content-center" style="padding-left:5px;">
-        <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
-            <h4>First Version</h4>
-            <div style="padding-left: 20px;">
-                <h5>Approach</h5>
-                <p style="font-weight: bold; margin-top: 10px; margin-bottom: 0px;">Data</p>
-                <p style="margin-top: 0px; margin-bottom: 0px;">
-                    As a data source, I need a large amount of text in which the application of technologies that are interesting to us are described.
-                    Ideally, the data would be diverse in the way that different Analytics/ML/AI Use Cases are described.
-                    As a first data scource, I am going to use posts and 
-                    comments from reddit.com.<br>
-                    Reddit.com is a network of communities based on people's interests.
-                    There are several subreddits, which make up subcommunities in which people share content and ask questions.
-                    Other members of a subreddit can see and comment on the posts. <br>
-                    <i class="fa fa-angle-right" style="color:red; padding-top: 5px; font-size: 24px;"></i> Get comments and posts from reddit.com
-                </p> 
-                <p style="font-weight: bold; margin-top: 10px; margin-bottom: 0px;">Analytics</p>
-                <p style="margin-top: 0px; margin-bottom: 0px;">
-                    Since the raw data that I am going to use is not structured in any way, I am going to extract the technologies that are named in a very simple way.
-                    I am going to write a json file with technologies that I want to include in my analysis. For each technology, I am going to
-                    specify aliases (Spark = Spark2, vue = vue.js, S3 = Simple Storage Service) and the corresponding technology family (Spark: Analytics, MongoDB: Database).
-                    Using aliases assures that I do not create two different embeddings for the same technology, and that I don't miss the appearance of a technology 
-                    in the text.
-                    I will then look through each post and through each comment and find out if the technologies that I have specified apppeared in the post/comment.
-                    This has one major drawback: Some technolgies that I would like to include have names that correspond to English words, such as 
-                    the Javascript framework React. A possible way around would be to have a Natural Language Processing model
-                    analyze which of the words or groups of words in the comments or posts correspond to a named entity (Basically, which of the words are names).
-                    I will experiment with ways to deal with the drawback later, and will ignore "problematic" technolgies in the first version of the technology map.
-                    When the data is structured, and all posts and comments are converted into lists of technologies that were mentioned in the respective post or comment,
-                    I am going to use a word embedding algorithm like word2vec to map the technologies into a vectorspace. <br>
-                    <i class="fa fa-angle-right" style="color:red; padding-top: 5px; font-size: 24px;"></i> Extract technologies by using a structured list of technologies
-                    to look for in comments and posts, then use word2vec to generate embeddings for the technologies.
-
-                </p>
-                <p style="font-weight: bold; margin-top: 10px; margin-bottom: 0px;">Visualization</p>
-                <p style="margin-top: 0px; margin-bottom: 0px;">
-                    In general, Natural Language Processing models use a vectorspace for the embedding of words or phrases that is high-dimensional, typically in the hundreds.
-                    I do not need to map the large number of words, that languages normally use, into a vectorspace. Therefore, the vectorspace of this project will be much smaller
-                    in terms of its dimensionality. In my past experience, the optimal number of dimensions for a vectorspace that had to contain 1000-2000 different vectors was 
-                    in the range of 10-20. My technology map will have an even smaller number of technolgies taken into account (especially the first version) so the dimensionality necessary
-                    to get good results is probably very low.
-                    If we want to visualize the entire map, we would have to find a way to plot all technologies in two dimensions for example by using <a href="https://gephi.org/">Gephi</a>. 
-                    <br>
-                    <i class="fa fa-angle-right" style="color:red; padding-top: 5px; font-size: 24px;"></i> Use basic visualizations to test if our model is working.
-                    For example, test which are the technologies closest to a given test technology and visualize the distance of each of the resulting technologies to our
-                    test technology (maybe just use a basic table). If results are good, see how low we can go in terms of the vectorspaces dimensionality.
-                </p>
-            </div>        
-        </div>
-    </div>
-
-    <!-- Horizontal blue line-->
-    <div class="container-fluid" style="padding-top:0px; padding-bottom:0px; margin-top: 0px; margin-bottom: 0px;">
-        <div class="row justify-content-center"">
-            <div class="col-lg-5 col-xs-7 pb-1" >
-                <hr style="border-top: 1px solid blue;">
-            </div>
-            <div class="col-lg-4 "></div>
-        </div>
-    </div>
-
-    <!-- Current status-->
-    <div class="row justify-content-center" style="padding-left:5px;">
-        <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
-            <div style="padding-left: 20px;">
-                <h5>Implementation</h5>
-                <p>14.05.2020</p>
-                <p> I used the <a href="https://pushshift.io/api-parameters/" target="_blank">pushlift API</a> to acess Reddit's data.
-                    I chose to include posts and comments from the subreddits "MachineLearning", "webdev", "bigdata", "datascience", "analytics" and "ArtificialInteligence". 
-                    I decided to use data from the last 2 years, to get a somewhat recent view on things. I also decided only to include posts and 
-                    comments that have as least as many likes as dislikes. This might be overcautious, since most of the time the comment
-                    was probably not downvoted because the technologies named should not appear together. Under the given requirements
-                    (subreddit, time, vote) I get more than 70.000 posts and more than 900.000 comments with a content that contain more than 15 characters.
-                    There are two ways how the data can be used:<br>
-                    1: Treat every post and every comment individually. This would mean that I count two technologies as appearing
-                    together only if they appear in the same post/comment. 
-                    2: Combine contents of a post and its comments. Either "globally", by just combining all of their contents or 
-                    by building several "local" combinations, in which each comment would be combined only with its father comment (which 
-                    could be the original post).<br> 
-                    I will start by first analyzing each post and each comment individually, since it appears more
-                    straightforward. A post or content has an effect on the outcome of the model, if at least two different technologies appear in it. Of 
-                    the more than 1 million posts and comments, only about 22.000 contained at least two of the technologies that I searched for (the list of technologies
-                    that are searched for are listed in the "technologies.json" file in the 
-                    <a href="https://github.com/HannoMaximilian/AnalyticsTechnologyMap" target="_blank">projects repository</a>).
-                    The following heatmap shows, how often two technologies appeared together in a post or comment. Note that many constellations appeared
-                    much more than 20 times.
-                </p>
-            </div>            
-        </div>
-    </div>
-        <!-- Heatmap -->
-    <div class="row justify-content-center x">   <!--style="max-width: 800px;"-->
-        <div class="col-xl-5  col-sm-9 col-xs-11 pb-1">
-            <figure style="padding-top: 20px; padding-bottom: 20px;">
-                <img id="myImg2" src="img/projects/TechnologyMap/heatmap.png" class="img-fluid clickable_image">
-                <figcaption style="text-align: center; font-size: normal;">Co-occurence heatmap</figcaption>
-            </figure>
-
-                        <!-- The Modal -->
-            <div id="myModal2" class="modal">
-                <span id="close2" class="close">&times;</span>
-                <img class="modal-content" id="img02">
-                <div id="caption2" class="caption"></div>
-            </div>
-            <script>
-                // Get the modal
-                var modal2 = document.getElementById("myModal2");
-                
-                // Get the image and insert it inside the modal - use its "alt" text as a caption
-                var img2 = document.getElementById("myImg2");
-                var modalImg2 = document.getElementById("img02");
-                var captionText2 = document.getElementById("caption2");
-                img2.onclick = function(){
-                    modal2.style.display = "block";
-                    modalImg2.src = this.src;
-                    captionText2.innerHTML = this.alt;
-                    }
-                
-                // Get the <span> element that closes the modal
-                var span2 = document.getElementById("close2");
-                
-                // When the user clicks on <span> (x), close the modal
-                span2.onclick = function() { 
-                modal2.style.display = "none";
-                }
-            </script>
-        </div>
-    </div>
-    <div class="row justify-content-center" style="padding-left:5px;">
-        <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
-            <div style="padding-left: 20px;">
-                <p>For the embedding of the words I used 
-                    <a href="https://radimrehurek.com/gensim/models/word2vec.html", target="_blank">Gensim's implementation of Word2Vec</a>. 
-                    Each technology was treated as a word in a sentence.
-                    The "sentence" was the collection of technologies that were named in a comment or post. 
-                    The word2vec algorithm allows the user to define the number of dimensions that the vector space is going to have.
-                    After trying out different numbers of dimensions, I decided that the best results were achieved with three to four dimensions.
-                    To visualize the embedding space, I used the t-Distributed Stochastic Neighbor Embedding algorithm implemented in
-                    <a href="https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html" target="_blank">sklearn.manifold.TSNE</a>
-                    to reduce the dimensionality of the word vector to just two dimensions which I was then able to plot.
-                    The "perplexity" parameter of the t-SNE algorithm can easily be optimized by comparing the resulting vizalization to 
-                    the technologies that are listed as closest to each other when using Gensims most_similar() function.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Analytics Map V1 -->
-    <div class="row justify-content-center x">   <!--style="max-width: 800px;"-->
-        <div class="col-xl-3  col-sm-9 col-xs-11 pb-1">
-            <figure style="padding-top: 20px; padding-bottom: 20px;">
-                <img id="myImg3" src="img/projects/TechnologyMap/3D_iter50_perplex30.png" class="img-fluid clickable_image">
-                <figcaption style="text-align: center; font-size: normal;">Analytics Map Version 1</figcaption>
-            </figure>
-
-                        <!-- The Modal -->
-            <div id="myModal3" class="modal">
-                <span id="close3" class="close">&times;</span>
-                <img class="modal-content" id="img03">
-                <div id="caption3" class="caption"></div>
-            </div>
-            <script>
-                // Get the modal
-                var modal = document.getElementById("myModal3");
-                
-                // Get the image and insert it inside the modal - use its "alt" text as a caption
-                var img = document.getElementById("myImg3");
-                var modalImg = document.getElementById("img03");
-                var captionText = document.getElementById("caption3");
-                img.onclick = function(){
-                    modal.style.display = "block";
-                    modalImg.src = this.src;
-                    captionText.innerHTML = this.alt;
-                    }
-                
-                // Get the <span> element that closes the modal
-                var span = document.getElementById("close3");
-                
-                // When the user clicks on <span> (x), close the modal
-                span.onclick = function() { 
-                    modal.style.display = "none";
-                    }
-            </script>
-        </div>
-    </div>
-
-    <!-- Discussion of Version 1 -->
-    <div class="row justify-content-center" style="padding-left:5px;">
-        <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
-            <div style="padding-left: 20px;">
-                <p>The visualization indicates that the posts and comments from reddit hold usefull information about the investigated technologies.
-                    The combination of word2vec and t-SNE was able to retrieve and visualize the underlying information. <br>
-                    The relative position of most of the technologies makes sense intuitively. Most database technologies are close to each other,
-                    as are visualization tools. There is one group which mainly consists of Big Data processing technologies (all the Apache stuff, Dask, Flink)
-                     and another group which consists mainly of computing platforms (Amazon Lightsail, AWS, Google Clud Platform, Azure). The computing platform
-                     Amazon EMR is much closer to the processing technologies than to the other computing platforms. A reason could be that Amazon EMR is 
-                     used for the processing of Big Data, and it might appear more often in the processing setting than in the platform setting.
-                     The location of technology family names 
-                     that I included in the analysis (Database, SQL Database, NoSQL Database, Cloud, Big Data, Machine Learning, Visualization) appears to make sense as well.<br>
-                     Locations that were surprising to me are:
-                </p>
-                    <ul>
-                     <li>Amazon Sagemaker and Qlik being quite far off</li>
-                     <li>d3.js being so much closer to the visualization tools than to the Javascript frameworks</li>
-                     <li>Microsoft Access bein so close to the visualization tools</li>
-                     <li>SQL and NoSQL technologies being so close to each other</li>
-                    </ul>
-                <p>
-                    Although the relative position of most technologies makes sense, it is not possible to understand where the position comes from.
-                    Are two technologies close to each other because they often appeared together in a post/comment, or just because they often appeared
-                    together in a post/comment with the same third technology?<br>
-                    In the next version of the visualization, I want to include edges between the nodes that show how often the two connected nodes/technologies 
-                    have appeard together in a sentence. It would also be interesting to set the size of the nodes relative to how often the respective technology appeared
-                    altogether.
-
-                </p>         
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Horizontal red line-->
-    <div class="container-fluid" style="padding-top:0px; padding-bottom:0px; margin-top: 0px; margin-bottom: 0px;">
-        <div class="row justify-content-center"">
-            <div class="col-lg-6 col-xs-8 pb-1" >
-                <hr style="border-top: 1px solid red;">
-            </div>
-            <div class="col-lg-4 "></div>
-        </div>
-    </div>
-    <!-- Second Version-->
-    <!-- Approach-->
-    <div class="row justify-content-center" style="padding-left:5px;">
-        <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
-            <h4>Second Version</h4>
-            <div style="padding-left: 20px;">
-                <h5>Approach</h5>
-                <p style="font-weight: bold; margin-top: 10px; margin-bottom: 0px;">Data</p>
-                <p style="margin-top: 0px; margin-bottom: 0px;">
-                    Use the same data source as before.
-                </p>
-                <p style="font-weight: bold; margin-top: 10px; margin-bottom: 0px;">Analytics</p>
-                <p style="margin-top: 0px; margin-bottom: 0px;">
-                    Use the same way of preprocessing posts and comments as before.
-                </p>
-
-                <p style="font-weight: bold; margin-top: 10px; margin-bottom: 0px;">Visualization</p>
-                <p style="margin-top: 0px; margin-bottom: 0px;">
-                    Visualize edges between nodes/technologies, whose thickness indicate how often the two 
-                    corresponding technologies appeared together. If the selected visualization implementation allows it,
-                    adjust the size of the nodes dependent on how often the respective technology has appeared in total.
-                    It would also be interesting to colour the nodes dependent on the technology family that the respective
-                    technology belongs to (Database, Cloud, Visualization...).
-            </div>
-        </div>
-    </div>
-
-    <!-- Horizontal blue line-->
-    <div class="container-fluid" style="padding-top:0px; padding-bottom:0px; margin-top: 0px; margin-bottom: 0px;">
-        <div class="row justify-content-center"">
-            <div class="col-lg-5 col-xs-7 pb-1" >
-                <hr style="border-top: 1px solid blue;">
-            </div>
-            <div class="col-lg-4 "></div>
-        </div>
-    </div>
-
-    <!-- Implementation-->
-    <div class="row justify-content-center" style="padding-left:5px;">
-        <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
-            <div style="padding-left: 20px;">
-                <h5>Implementation</h5>
-                <p>16.05.2020</p>
-                <p>
-                    I found an <a href="https://github.com/rweng18/midsummer_network", target="_blank">example online</a>
-                    , where somebody created a network of the characters appearing in Shakespears play "A Midsummer Night's Dream" based on 
-                    how often each two characters appear together in a scene.
-                    I decided to use the same visualization technique. The first version of the technology map showed that it is possible to visualize
-                    the map in 2D. Following the given example, I used the
-                    <a href="https://networkx.github.io/documentation/networkx-1.9/reference/generated/networkx.drawing.layout.spring_layout.html" target="_blank">
-                    spring_layout from networkx</a> to generate the position of the nodes for the second version of the map. Instead of first mapping the technologies in a high dimensional
-                    vector space and then reducing the dimensionality for the visualization, the spring_layout algorithm will calculate the distribution of the technologies
-                    in 2D directly. In order to calculate each technologies/nodes location, it is necessary to define how "stong" the edge between each two nodes is. 
-                    The stronger the edge, the closer the two linked nodes are to each other in the visualization. Using the actual number of coappearances as 
-                    the strength of the edge makes all technologies that come up very often appear close to each other in the center of the map. To generate the shown map,
-                    I used a kind of relative importance:<br>
-                    <i>edgeweight_tech1_tech2 = (coappearances / appearances_tech1) + (coappearances / appearances_tech2)</i><br> 
-                    I also set a threshold of 0.15 for the edgeweight. If the edgeweight between two technologies was smaller than the threshold, the
-                    edge was neither visualized, nor was it taken into account when calculating the position of the nodes.
-                </p>
-            </div>
-        </div>
-        <div class="row justify-content-center x">   <!--style="max-width: 800px;"-->
-            <div class="col-xl-5  col-sm-9 col-xs-11 pb-1">
-                <!-- Technology Map V2 -->
-                <figure style="padding-top: 10px; padding-bottom: 10px;">
-                    <a href="./img/projects/TechnologyMap/techmap_V2_threshold015.html" target="_blank">
-                    <img src="img/projects/TechnologyMap/TechnologyMapV2.jpg"  class="img-fluid clickable_image">
-                    </a>
-                    <figcaption style="text-align: center; font-size: normal; margin-top: 10px;"><b>Technology Map V2 </b><br>Purple: Visualization and BI, Red: Data Processing, Blue: Database, Yellow: Cloud Service, 
-                    Olive: Web App, Black: Technology Family, Grey: Othes</figcaption>
-                </figure>
-            </div>
-        </div>
-        <div class="row justify-content-center" style="padding-left:5px;">
-            <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
-                <div style="padding-left: 20px; padding-bottom: 80px;">
-                    <p>
-                        The size of the nodes has been set based on the squareroot of how often the respective technology 
-                        apeared in all comments and posts. If a node is double the size of another node, its technology appeared 
-                        four times as often. Note that not every actual appearance of a technology in a post or comment is 
-                        recognized as such by my "technology extraction pipeline". When people talk about React.js, they often 
-                        just write React. Since react is also a verb, I am currently just counting appearances of React.js. 
-                        The Cloud Service group of technologies is consisting mainly of Amazon services. 
-                        Google and Azure services often do not have a specific name, such as Amazon's S3 or EC2. This makes it 
-                        harder to detect the mentioning of a Azure or Google Service. 
-                        The color of the nodes is based on the type of technology. For some technologies, 
-                        it was difficult to decide which family they belonged to. DynamoDB for example is an Amazon Cloud Service,
-                        but also a Database. For a zoomable version of the map,
-                        please click on the image.
-                    </p>
-                    <p>
-                        The second version of the technology map gives much more insight into how the technologies 
-                        are discussed on reddit. After using a different method to place the technologies in the 2D plot,
-                        we see groups that are similar to the groups that we saw in the first version of the technology map 
-                        (Database, Big Data Processing, Visualization and BI). Some technologies are not part of the new version,
-                        because I increased the minimum number of appearances for a technology to have to be included.
-                    </p>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-
-
-<!-- My website-->
-<div class="container-fluid"  style="padding-top: 30px; background-color: white; border-top: 1px solid black;">   <!-- background-color: whitesmoke;-->
-    <div class="row justify-content-center x">   <!--style="max-width: 800px;"-->
-        <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
-        <h3 class="project_header" >My Website</h3>
-        <p>28.04.2020</p>
-        <a href="https://github.com/HannoMaximilian/website" target="_blank">Github Repository</a>
-        </div>
-    </div>
-    
-    <!-- Desciption-->
-    <div class="row justify-content-center" style="padding-left:5px; padding-bottom: 150px;">
-        <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
-            <h5>Description</h5>
-            <p>I built this static website using mainly HTML and Bootstrap with just very little custom CSS. If I want to include a web app in the future
-                I will deploy a microservice and keep the static part constant. A very helpful resource to understand the Bootstrap 4 grid 
-                layout <a href="https://www.youtube.com/watch?v=qmPmwdshCMw" target="_blank">is this video on youtube</a>. All html and the css file of this website
-                can be found on my <a href="https://github.com/HannoMaximilian/website" target="_blank"></a>github repository.
-            </p>            
-        </div>
     </div>
 </div>
+<script>
+
+$("#project1").click(function() {
+    window.location = $(this).find("a").attr("href"); 
+    return false;
+  });
+</script>
+
+<!-- 
+<script>
+    var project = document.getElementById("project1");
+        project.onclick = function() { 
+        window.location = this.href;
+        }
+</script>
+-->
+
+
+<!-- My Website-->
+<div class="container-fluid"  style="padding-top: 30px; padding-bottom: 30px;">   <!-- background-color: whitesmoke;-->
+    <div class="row justify-content-center">   <!--style="max-width: 800px;"-->
+    <div id="project2" class="clickable_project col-xl-7 col-sm-10 col-xs-11  pb-5">
+        <a href="./projects/website.html" ></a>
+        <h4 class="display-5" style="padding: 10px;">My Website</h4>
+        <span>
+            <img src="./img/projects/Website/webdesign.jpg" class="img-fluid" style="max-width: 20%; float: left; margin-right: 10px; vertical-align: middle;">
+        </span>
+        <span>
+            <p> I built this static website using mainly HTML and Bootstrap with just very little custom CSS and Javascript.
+                If I make any major changes to the website in the future like including a microservice, 
+                I will update this project page and give some information on how I did it.
+            </p>
+            <span style="color: black;">Status: Paused</span>
+        </span>
+    </div>
+    </div>
+</div>
+<script>
+
+$("#project2").click(function() {
+    window.location = $(this).find("a").attr("href"); 
+    return false;
+  });
+</script>
+
 
 
 
