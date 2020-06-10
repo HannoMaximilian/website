@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 
 
@@ -13,9 +13,24 @@
   
 }
 
+/*--
+This is usefull to see the depth of elements on the page
+Just for debugging
+* { background-color: rgba(255,0,0,.2); }
+* * { background-color: rgba(0,255,0,.2); }
+* * * { background-color: rgba(0,0,255,.2); }
+* * * * { background-color: rgba(255,0,255,.2); }
+* * * * * { background-color: rgba(0,255,255,.2); }
+* * * * * * { background-color: rgba(255,255,0,.2); }
+* * * * * * * { background-color: rgba(255,0,0,.2); }
+* * * * * * * * { background-color: rgba(0,255,0,.2); }
+* * * * * * * * * { background-color: rgba(0,0,255,.2); }
+--*/
+
 p {
   /*font-size: smaller;
   /*---Change font? --*/
+  font-family: Lato;
 
 }
 
@@ -256,12 +271,17 @@ a:active {
   color: red !important;
 }
 
-/* Not so sure about this */
+/* Not so sure about this 
 .navbar {
   border-bottom-color: black;
   border-bottom-width: 3px;
   border-bottom-style: double;
 }
+*/
+.navbar {
+  font-size: large;
+}
+
 
 .navbar-custom {
   background-color: transparent;
