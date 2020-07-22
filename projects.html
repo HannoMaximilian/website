@@ -59,6 +59,46 @@
 
 <!-- Project List-->
 
+
+<!-- Investment Insight-->
+<div class="container-fluid"  style="padding-top: 30px; padding-bottom: 50px;">   <!-- background-color: whitesmoke;-->
+    <div class="row justify-content-center">   <!--style="max-width: 800px;"-->
+    <div id="project3" class="clickable_project col-xl-7 col-sm-10 col-xs-11  pb-5">
+        <a href="./projects/investment_insight.html" ></a>
+        <h4 class="display-5" style="padding: 10px;">Investment Insight</h4>
+        <span>
+            <img src="./img/projects/InvestmentInsight/stock_data.jpg" class="img-fluid" style="max-width: 20%; float: left; margin-right: 10px; vertical-align: middle;">
+        </span>
+        <span>
+            
+            <p>The goal of this project is to create a dashboard for the analysis of stock data. For a chosen company,
+                the dashboard will show historical data, key financial indicators as well as the results of computed strategies.
+            </p>
+            <span style="color: green">Status: Ongoing</span>
+        </span>
+    </div>
+    </div>
+</div>
+<script>
+
+$("#project3").click(function() {
+    window.location = $(this).find("a").attr("href"); 
+    return false;
+  });
+</script>
+
+<!-- 
+<script>
+    var project = document.getElementById("project1");
+        project.onclick = function() { 
+        window.location = this.href;
+        }
+</script>
+-->
+
+
+
+
 <!-- Analytics Technology Map-->
 <div class="container-fluid"  style="padding-top: 30px; padding-bottom: 50px;">   <!-- background-color: whitesmoke;-->
     <div class="row justify-content-center">   <!--style="max-width: 800px;"-->
@@ -73,7 +113,7 @@
             <p>The goal of this project is to create a map of technologies that are related to Data Analytics. This includes 
             database technolgies, data processing technologies and data visualization tools. 
             </p>
-            <span style="color: green">Status: Ongoing</span>
+            <span style="color: #CCCC00;">Status: Paused</span>
         </span>
     </div>
     </div>

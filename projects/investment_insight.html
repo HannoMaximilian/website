@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="../style.css" rel="stylesheet">
+    <title>Financial Insight Backtrader</title>
+    <link rel="icon" href="./img/hz_3.png">
+
+
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-light"> 
+        <a href='../index.html' class="navbar-brand" style="margin-left: 20px;">Hanno Maximilian Zang</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMenu" style="margin: 10px;">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a href="../index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="../aboutme.html" class="nav-link">About Me</a>
+        </li>
+        <li class="nav-item">
+            <a  href="../photography.html" class="nav-link">Photography</a>
+        </li>
+        <li class="nav-item">
+            <a id="selected" href="../projects.html" class="nav-link">Projects</a>
+        </li>
+    </ul>
+    </div>
+</nav>
+
+<!-- Investment Insight -->
+<div class="container-fluid"  style="padding-top: 70px; padding-bottom: 100px; background-color: white;">   <!-- background-color: whitesmoke;-->
+  <div class="row justify-content-center x">   <!--style="max-width: 800px;"-->
+    <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
+        <h3 class="project_header" >Investment Insight</h3>
+        <p>10.07.2020</p>
+        <p style="color:darkblue">Github Repository might be made public in the future</p>
+    </div>
+</div>
+
+<!-- Desciption-->
+<div class="row justify-content-center" style="padding-left:5px; padding-bottom: 20px;">
+    <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
+        <h5>Description</h5>
+        <p>The goal of this project is to create a dashboard for the analysis of stock data. For a chosen company,
+            the dashboard will show historical prices and key performance indicators as well as the results of Advanced Analytics being applied on the historical data.
+            
+            I am building the dashboard to give usefull information about a given stock. I do not plan to do any algorithmic trading. The results
+            of my analysis of the key performance indicators and the historical stock prices will not trigger automatic Buy or Sell decisions, 
+            but instead will just be visualized in the dashboard. This way I can look at the dashboard of a company that I find interesting and 
+            see whether or not <i>Now</i> is a good time to buy according to the historical performance indicators and according to strategies being executed on the historical stock prices.
+            The scope of the project is to aid with investing decisions with a time horizont of months to years.
+            The project has three major technical components:
+            <ul>
+                <li><strong>Investment Insight: Data</strong> is responsible for collecting data from different data sources, safe the data in an SQL database and vendor 
+                    it to both the Dashboard directly (if it is data that I will publish raw) and to the Analytics component.</li>
+                <li><strong>Investment Insight: Analytics</strong> is responsible for gathering insights from the data using statistics and Machine Learning.</li>
+                <li><strong>Investment Insight: Dashboard</strong> is responsible for the actual visualization of the results. </li>
+            </ul>
+            The focus of the project will be on the german stock indices. I am especially interested in smaller companies in the tech industry. 
+            The first version of the dashboard is going to include just a small number of companies and a small number of dashboard elements. This way I can try out
+            the whole pipeline from data collection to deployment without getting too engaged with any of the technologies used.
+            I am going to containerize the entire code base so that I have more freedom in regards to where each of the three components is running.<br><br>
+            The following visualization shows the currently expected structure of the project.
+        </p>
+    </div>
+</div>
+
+<!-- Project overview -->
+<div class="row justify-content-center">   <!--style="max-width: 800px;"-->
+    <div class="col-xl-5  col-sm-9 col-xs-11 pb-1">            
+        <figure style="padding-top: 20px; padding-bottom: 20px; max-width: 600px; margin: 0 auto !important;">
+            <img src="../img/projects/InvestmentInsight/project_overview.jpg" class="img-fluid"">
+            <figcaption style="text-align: center; font-size: normal;">General project overview</figcaption>
+        </figure>
+
+    </div>
+</div>
+
+<!--
+
+<div class="row justify-content-center" style="padding-left:5px; padding-bottom: 150px;">
+    <div class="col-xl-8  col-sm-9 col-xs-11 pb-1">
+        <p>
+            Now we continue talking.
+        </p>
+    </div>
+</div>
+</div>
+-->
+
+</body>
+
+<footer id="footer">
+    <small>
+        <a href= "../privacy_de.html" target="_blank" style="color:white;">Impressum, Disclaimer, Datenschutz (DE)</a><br>
+        <a href= "../privacy_en.html" target="_blank" style="color:white;">Impressum, Disclaimer, Privacy Policy (EN)</a>
+    </small>
+</footer>
+
+</html>
